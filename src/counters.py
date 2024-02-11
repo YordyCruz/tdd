@@ -5,7 +5,6 @@ app = Flask(__name__)
 
 COUNTERS = {}
 
-
 # We will use the app decorator and create a route called slash counters.
 # Specify the variable in route <name>.
 # Let Flask know that the only method that is allowed to be called
@@ -41,4 +40,3 @@ def read_counter(name):
     global COUNTERS
     if name in COUNTERS:
         return {name: COUNTERS[name]}, status.HTTP_200_OK
-    
