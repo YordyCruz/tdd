@@ -41,3 +41,13 @@ def read_counter(name):
     global COUNTERS
     if name in COUNTERS:
         return {name: COUNTERS[name]}, status.HTTP_200_OK
+
+@app.route('/counters/<name>', methods=['DELETE'])
+def delete_counter(name):
+    """Delete a counter."""
+    app.logger.info(f"Request to delete counter: {name}")
+    global COUNTERS6
+    if name in COUNTERS:
+        COUNTERS.pop(name) # add name as conter pass all 5 test
+        return {name: name }, status.HTTP_204_NO_CONTENT
+    
