@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 COUNTERS = {}
 
+
 # We will use the app decorator and create a route called slash counters.
 # Specify the variable in route <name>.
 # Let Flask know that the only method that is allowed to be called
