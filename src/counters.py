@@ -42,6 +42,7 @@ def read_counter(name):
     if name in COUNTERS:
         return {name: COUNTERS[name]}, status.HTTP_200_OK
 
+
 @app.route('/counters/<name>', methods=['DELETE'])
 def delete_counter(name):
     """Delete a counter."""
